@@ -17,12 +17,12 @@ const NavBar = () => {
                     />
                 </Link>
             </div>
-            <div className="flex-1 flex justify-center">
-                <Link href="/shop">Shop</Link>
-            </div>
+            {/* <div className="flex-1 flex justify-center font-[family-name:var(--font-geist-mono)] text-3xl text-white transition-color ease-in-out duration-500 hover:text-[#dfba9d]">
+                <Link href="/shop">shop</Link>
+            </div> */}
             <div className="flex-1 flex justify-end">
                 <Link href="/cart">
-                    <FaOpencart className="w-6 h-6 md:w-8 md:h-8 text-white"/>
+                    <FaOpencart className="w-6 h-6 md:w-10 md:h-10 text-white transition-color ease-in-out duration-800 hover:text-[#dfba9d]"/>
                 </Link>
             </div>
         </nav>
