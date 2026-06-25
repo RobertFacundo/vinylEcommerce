@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Alegreya } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/shared/components/navigation/NavBar";
+import ReactQueryProvider from "@/shared/providers/ReactQueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,8 +35,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${alegreya.variable} h-full antialiased`}
     >
       <body className="min-h-screen flex flex-col">
-        <NavBar />
-        {children}
+        <ReactQueryProvider>
+          <NavBar />
+          {children}
+        </ReactQueryProvider>
       </body>
     </html>
   );
