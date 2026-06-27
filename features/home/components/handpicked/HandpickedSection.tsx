@@ -17,7 +17,7 @@ const HandpickedSection = () => {
                     <SectionH1 title="Featured picks"/>
                     <ViewCollectionsButton />
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mx-auto">
                     {albums.map(album => (
                         <Link href={`/shop?album=${album.title}`} key={album.title}>
                             <HandpickedCard title={album.title} cover={album.cover_big} band={album.artist?.name ?? "Unknown Artist"} price={album.price} />
