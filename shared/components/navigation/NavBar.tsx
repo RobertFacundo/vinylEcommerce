@@ -13,16 +13,13 @@ const NavBar = () => {
                         alt="Vinyl Store Logo"
                         width={48}
                         height={48}
-                        className="w-8 md:w-16 h-auto"  
+                        className="w-12 md:w-16 h-auto"  
                     />
                 </Link>
             </div>
-            {/* <div className="flex-1 flex justify-center font-[family-name:var(--font-geist-mono)] text-3xl text-white transition-color ease-in-out duration-500 hover:text-[#dfba9d]">
-                <Link href="/shop">shop</Link>
-            </div> */}
             <div className="flex-1 flex justify-end">
                 <Link href="/cart">
-                    <FaOpencart className="w-6 h-6 md:w-10 md:h-10 text-white transition-color ease-in-out duration-800 hover:text-[#dfba9d]"/>
+                    <FaOpencart className="w-8 h-8 md:w-10 md:h-10 text-black md:text-white transition-color ease-in-out duration-800 hover:text-[#dfba9d]"/>
                 </Link>
             </div>
         </nav>

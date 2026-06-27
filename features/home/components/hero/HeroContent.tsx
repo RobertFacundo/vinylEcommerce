@@ -1,6 +1,6 @@
 const HeroContent = () => {
     return (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 md:mt-0 mt-15">
             <p className="text-[#C89268] text-sm font-semibold">VINYLS - CURATED WITH PASSION</p>
             <h1 className="text-8xl mb-6 leading-[1.05] font-[family-name:var(--font-alegreya)] font-semibold">Feel the warmth of <span className="text-[#C89268]">real music.</span></h1>
             <div className="flex flex-col gap-2 mb-8 text-md opacity-80 font-[family-name:var(--font-geist-mono)] tracking-tighter">

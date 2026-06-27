@@ -1,4 +1,5 @@
 import { api } from "@/shared/api/axios";
+import { getRandomPrice } from "@/shared/utils/getRandomPrice";
 
 export const getAlbumById = async (id: number) => {
     const res = await api.get(`/album/${id}`);
@@ -6,5 +7,5 @@ export const getAlbumById = async (id: number) => {
         throw new Error("Invalid album");
     }
 
-    return res.data;
+    return { ...res.data, price: getRandomPrice() };
 }
