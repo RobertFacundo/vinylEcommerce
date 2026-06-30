@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/shared/components/navigation/NavBar";
 import ReactQueryProvider from "@/shared/providers/ReactQueryProvider";
 import Footer from "@/shared/components/footer/Footer";
+import LenisProvider from "@/shared/components/ui/LenisProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col">
         <ReactQueryProvider>
+          <LenisProvider />
           <NavBar />
           {children}
           <Footer />

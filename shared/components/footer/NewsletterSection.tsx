@@ -28,7 +28,7 @@ const NewsletterSection = () => {
                     SUBSCRIBE
                 </button>
             </div>
-            <Image src={Vinyl} alt="vinilo" width={50} height={30} className="md:rotate-180 hidden md:flex ml-auto" />
+            <Image src={Vinyl} alt="vinilo" width={50} height={30} className="h-auto w-[50px] md:rotate-180 hidden md:flex ml-auto" />
         </div>
     )
 };

@@ -13,7 +13,7 @@ const NavBar = () => {
                         alt="Vinyl Store Logo"
                         width={48}
                         height={48}
-                        className="w-12 md:w-16 h-auto"  
+                        className="w-12 h-auto md:w-16 h-auto"  
                     />
                 </Link>
             </div>

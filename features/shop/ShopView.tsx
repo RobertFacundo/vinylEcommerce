@@ -1,6 +1,10 @@
+import HeroShopSection from "./components/hero/HeroShopSection";
+
 const ShopView = () => {
     return (
-        <h1>Shop view</h1>
+        <>
+            <HeroShopSection />
+        </>
     )
 };
 export default ShopView;

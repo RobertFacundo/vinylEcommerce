@@ -1,7 +1,6 @@
 import { useQueries } from '@tanstack/react-query';
 import { handpickedAlbumIds } from '@/shared/data/handpickedAlbumsId';
 import { getAlbumById } from '../api/handpicked.service';
-import { getRandomPrice } from '@/shared/utils/getRandomPrice';
 
 export const useHandpickedAlbums = () => {
     const queries = useQueries({
