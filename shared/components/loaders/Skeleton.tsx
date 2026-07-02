@@ -4,7 +4,7 @@ type SkeletonProps = {
 
 const Skeleton = ({ className = "" }: SkeletonProps) => {
     return (
-        <div className={`animate-pulse bg-black/10 rounded-md ${className}`} />
+        <div className={`animate-pulse bg-white/50 rounded-md ${className}`} />
     );
 };
 
