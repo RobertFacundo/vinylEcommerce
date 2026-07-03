@@ -9,36 +9,56 @@ export async function GET(req: Request) {
 
         const page = Number(searchParams.get("page") ?? 1);
         const limit = Number(searchParams.get("limit") ?? 12);
+        const genre = Number(searchParams.get("genre") ?? 0);
 
-        const responses = await Promise.all(
-            queries.map((query) =>
-                fetch(`https://api.deezer.com/search?q=${query}`)
-            )
-        );
+        let allProducts: any[] = [];
 
-        const jsonResponses = await Promise.all(
-            responses.map((res) => res.json())
-        );
+        if (genre === 0) {
 
-        const albumsMap = new Map();
+            const responses = await Promise.all(
+                queries.map((query) =>
+                    fetch(`https://api.deezer.com/search?q=${query}`)
+                )
+            );
 
-        jsonResponses.forEach((response) => {
-            response.data.forEach((track: any) => {
-                const album = track.album;
+            const jsonResponses = await Promise.all(
+                responses.map((res) => res.json())
+            );
 
-                if (!albumsMap.has(album.id)) {
-                    albumsMap.set(album.id, {
-                        id: album.id,
-                        title: album.title,
-                        band: track.artist.name,
-                        cover: album.cover_xl,
-                        price: getRandomPrice(),
-                    });
-                }
+            const albumsMap = new Map();
+
+            jsonResponses.forEach((response) => {
+                response.data.forEach((track: any) => {
+                    const album = track.album;
+
+                    if (!albumsMap.has(album.id)) {
+                        albumsMap.set(album.id, {
+                            id: album.id,
+                            title: album.title,
+                            band: track.artist.name,
+                            cover: album.cover_xl,
+                            price: getRandomPrice(),
+                        });
+                    }
+                });
             });
-        });
 
-        const allProducts = Array.from(albumsMap.values());
+            allProducts = Array.from(albumsMap.values());
+        } else {
+            const res = await fetch(
+                `https://api.deezer.com/chart/${genre}/albums`
+            );
+
+            const data = await res.json();
+
+            allProducts = (data.data || []).map((album: any) => ({
+                id: album.id,
+                title: album.title,
+                band: album.artist.name,
+                cover: album.cover_xl,
+                price: getRandomPrice(),
+            }));
+        }
 
         const totalProducts = allProducts.length;
         const totalPages = Math.ceil(totalProducts / limit);
