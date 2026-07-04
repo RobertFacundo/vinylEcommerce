@@ -2,7 +2,7 @@ import { genres } from "@/shared/data/genres";
 
 type FiltersProps = {
     filter: number,
-    setFilter: React.Dispatch<React.SetStateAction<number>>;
+    setFilter: (value: number) => void;
 }
 
 const Filters = ({ filter, setFilter }: FiltersProps) => {

@@ -9,7 +9,7 @@ type productCardProps = {
 const ProductCard = ({ product }: productCardProps) => {
     const { title, band, cover, price } = product
     return (
-        <div className="card-animation w-[250px]">
+        <div className="card-animation w-[250px] cursor-pointer">
             <div className="relative w-fit flex transition-transform ease-in-out duration-800 hover:scale-105 ">
                 <Image src={cover} alt={title} className="w-auto h-auto z-10 transition-shadow ease-in-out duration-800 shadow-xl hover:shadow-sm " width={500}
                     height={300} />

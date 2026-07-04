@@ -21,6 +21,7 @@ const NewsletterSection = () => {
                 <input
                     type="email"
                     placeholder="Your email"
+                     autoComplete="off"
                     className="px-4 py-2 w-full md:w-[260px] bg-white/70 border border-black/10 rounded-sm text-sm font-[family-name:var(--font-geist-mono)] focus:outline-none"
                 />
 
