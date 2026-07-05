@@ -7,18 +7,34 @@ type FiltersProps = {
 
 const Filters = ({ filter, setFilter }: FiltersProps) => {
     return (
-        <div className="flex flex-col gap-4 w-full ml-4">
+        <div className=" w-full
+        rounded-xl
+        overflow-hidden
+        border
+        border-[#C89268]
+        bg-transparent">
             {genres.map(genre => (
                 <button
                     key={genre.id}
                     onClick={() => setFilter(genre.id)}
-                    className={` w-full max-w-[160px]
-                        px-4 py-2 rounded-full border text-sm transition
-                        ${filter === genre.id
-                            ? "bg-black text-white"
-                            : "bg-transparent hover:bg-black/10"
+                    className={`
+        w-full
+        h-11
+        px-4
+        flex
+        items-center
+        text-left
+        text-sm
+        border-b
+        border-[#C89268]
+        last:border-b-0
+        transition-colors
+        cursor-pointer
+        ${filter === genre.id
+                            ? "bg-[#C89268] text-white"
+                            : "hover:bg-[#C89268]/30"
                         }
-                    `}
+    `}
                 >
                     {genre.name}
                 </button>

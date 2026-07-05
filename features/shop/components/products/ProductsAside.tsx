@@ -15,7 +15,7 @@ const ProductsAside = ({
     setFilter,
 }: Props) => {
     return (
-        <aside className="flex md:flex-col gap-3 md:items-start">
+        <aside className="w-[190px]  flex md:flex-col gap-3 shrink-0">
             <Search
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}
