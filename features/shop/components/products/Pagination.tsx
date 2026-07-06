@@ -9,7 +9,7 @@ type PaginationProps = {
 
 const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) => {
     return (
-        <div className="flex justify-center items-center gap-4 my-6">
+        <div className="flex justify-center items-center gap-4 my-6 font-[family-name:var(--font-geist-mono)]">
             <PaginationButton disabled={currentPage === 1} onClick={() => onPageChange(currentPage - 1)} icon={<ChevronLeft size={18} />}>Previous</PaginationButton>
 
             <div className="flex flex-col items-center leading-tight">

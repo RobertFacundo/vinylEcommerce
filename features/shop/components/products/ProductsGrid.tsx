@@ -10,7 +10,7 @@ type ProductGridProps = {
 const ProductGrid = ({ isLoading, products }: ProductGridProps) => {
     return (
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mx-auto">
             {isLoading || !products
                 ? Array.from({ length: 12 }).map((_, i) => (
                     <CardSkeleton key={i} />

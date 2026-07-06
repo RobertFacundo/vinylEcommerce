@@ -12,7 +12,7 @@ const ProductsSection = () => {
     const { data: products, isLoading } = useProducts(page, filter, searchQuery);
 
     return (
-        <section className="w-full bg-[#e8cbb589]">
+        <section className="w-full bg-[#e8cbb589] border-b border-[#eea97488]/50">
             <div className=" max-w-8xl mx-auto px-6">
                 <Pagination currentPage={products?.currentPage ?? page} totalPages={products?.totalPages ?? 1} onPageChange={setPage} />
                 <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 mt-6 ">

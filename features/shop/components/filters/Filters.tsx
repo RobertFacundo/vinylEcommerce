@@ -30,6 +30,7 @@ const Filters = ({ filter, setFilter }: FiltersProps) => {
         last:border-b-0
         transition-colors
         cursor-pointer
+        font-[family-name:var(--font-geist-mono)]
         ${filter === genre.id
                             ? "bg-[#C89268] text-white"
                             : "hover:bg-[#C89268]/30"
