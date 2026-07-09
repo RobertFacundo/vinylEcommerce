@@ -1,5 +1,8 @@
+"use client"
 import Search from "./Search";
-import Filters from "../filters/Filters";
+import Filters from "./Filters";
+import { useRef } from "react";
+import { useAsideAnimation } from "../../animations/useAsideAnimation";
 
 type Props = {
     searchQuery: string;
@@ -14,8 +17,11 @@ const ProductsAside = ({
     filter,
     setFilter,
 }: Props) => {
+    const ref = useRef<HTMLDivElement>(null);
+
+    useAsideAnimation(ref)
     return (
-        <aside className="md:w-[190px] w-full flex flex-col gap-3 shrink-0">
+        <aside ref={ref} className="md:w-[190px] w-full flex flex-col gap-3 shrink-0">
             <Search
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}

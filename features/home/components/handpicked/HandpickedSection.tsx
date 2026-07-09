@@ -29,7 +29,7 @@ const HandpickedSection = () => {
                     {ready
                         ? albums.map(album => (
                             <Link href={`/shop?album=${album.title}`} key={album.title}>
-                                <HandpickedCard title={album.title} cover={album.cover_big} band={album.artist?.name ?? "Unknown Artist"} price={album.price} />
+                                <HandpickedCard title={album.title} cover={album.cover} band={album.artist?.name ?? "Unknown Artist"} price={album.price} />
                             </Link>
                         ))
                         : Array.from({ length: 4 }).map((_, i) => (

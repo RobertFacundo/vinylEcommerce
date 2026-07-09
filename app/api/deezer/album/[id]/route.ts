@@ -23,5 +23,37 @@ export async function GET(
 
     const data = await res.json();
 
-    return NextResponse.json(data);
+    const album = {
+        id: data.id,
+
+        // Información principal
+        title: data.title,
+        artist: data.artist.name,
+
+        // Imagen
+        cover: data.cover_xl,
+
+        // Metadata
+        releaseDate: data.release_date,
+        genre: data.genres.data[0]?.name,
+        label: data.label,
+
+        // Info del álbum
+        totalTracks: data.nb_tracks,
+        duration: data.duration,
+        recordType: data.record_type,
+
+        // Extras útiles
+        explicit: data.explicit_lyrics,
+        fans: data.fans,
+
+        tracks: data.tracks.data.map((track: any) => ({
+            id: track.id,
+            title: track.title,
+            duration: track.duration,
+            preview: track.preview
+        }))
+    };
+
+    return NextResponse.json(album);
 }

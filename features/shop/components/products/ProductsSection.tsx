@@ -1,9 +1,9 @@
 "use client"
 import { useProducts } from "../../hooks/useProducts";
-import Pagination from "./Pagination";
+import Pagination from "../pagination/Pagination";
 import ProductGrid from "./ProductsGrid";
 import { useState } from "react";
-import ProductsAside from "./ProductsAside";
+import ProductsAside from "../aside/ProductsAside";
 
 const ProductsSection = () => {
     const [page, setPage] = useState(1);

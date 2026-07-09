@@ -18,6 +18,7 @@ const PaginationButton = ({
             disabled={disabled}
             onClick={onClick}
             className="
+                button
                 flex items-center gap-2
                 rounded-md
                 border border-[#C89268]

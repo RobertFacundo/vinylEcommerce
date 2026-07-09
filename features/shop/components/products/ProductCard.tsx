@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Vinyl from '@/shared/assets/images/ui/vinyl.png'
 import { ProductType } from "../../types/product";
+import Link from "next/link";
 
 type productCardProps = {
     product: ProductType
 }
 
 const ProductCard = ({ product }: productCardProps) => {
-    const { title, band, cover, price } = product
+    const { title, band, cover, price, id } = product
     return (
-        <div className="card-animation w-[250px] cursor-pointer">
+        <Link href={`/shop/product/${id}`} className="card-animation w-[250px] cursor-pointer">
             <div className="relative w-fit flex transition-transform ease-in-out duration-800 hover:scale-105 ">
                 <Image src={cover} alt={title} className="w-auto h-auto z-10 transition-shadow ease-in-out duration-800 shadow-xl hover:shadow-sm " width={500}
                     height={300} />
@@ -20,7 +21,7 @@ const ProductCard = ({ product }: productCardProps) => {
                 <p className="text-xs font-[family-name:var(--font-geist-mono)] font-[family-name:var(--font-alegreya)] text-[#C89268] font-semibold tracking-tighter">{band}</p>
                 <span className="font-light font-[family-name:var(--font-geist-mono)] tracking-wide ">${price}</span>
             </div>
-        </div>
+        </Link>
     )
 };
 

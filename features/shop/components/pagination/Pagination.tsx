@@ -1,5 +1,8 @@
+"use client"
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import PaginationButton from "./PaginationButton";
+import { useRef } from "react";
+import { usePaginationAnimation } from "../../animations/usePaginationAnimation";
 
 type PaginationProps = {
     currentPage: number;
@@ -8,11 +11,13 @@ type PaginationProps = {
 }
 
 const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) => {
+    const ref = useRef<HTMLDivElement>(null)
+    usePaginationAnimation(ref)
     return (
-        <div className="flex justify-center items-center gap-4 my-6 font-[family-name:var(--font-geist-mono)]">
+        <div ref={ref} className="opacity-0 flex justify-center items-center gap-4 my-6 font-[family-name:var(--font-geist-mono)]">
             <PaginationButton disabled={currentPage === 1} onClick={() => onPageChange(currentPage - 1)} icon={<ChevronLeft size={18} />}>Previous</PaginationButton>
 
-            <div className="flex flex-col items-center leading-tight">
+            <div className="spans-container flex flex-col items-center leading-tight">
                 <span className="text-xs uppercase tracking-[0.25em] text-neutral-500">
                     Page
                 </span>

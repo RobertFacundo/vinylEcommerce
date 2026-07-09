@@ -7,7 +7,7 @@ type FiltersProps = {
 
 const Filters = ({ filter, setFilter }: FiltersProps) => {
     return (
-        <div className=" w-full
+        <div className="filters w-full
         rounded-xl
         overflow-hidden
         border
@@ -17,7 +17,7 @@ const Filters = ({ filter, setFilter }: FiltersProps) => {
                 <button
                     key={genre.id}
                     onClick={() => setFilter(genre.id)}
-                    className={`
+                    className={` filter-button
         w-full
         h-11
         px-4

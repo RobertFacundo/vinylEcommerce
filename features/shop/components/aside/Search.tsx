@@ -7,7 +7,7 @@ type SearchProps = {
 
 const Search = ({ searchQuery, setSearchQuery }: SearchProps) => {
     return (
-        <div className="flex items-center gap-2 h-11 px-3 rounded-xl border
+        <div className="search flex items-center gap-2 h-11 px-3 rounded-xl border
                        border-[#C89268] bg-transparent transition focus-within:border-[#C89268]"
         >
             <div className="shrink-0">
