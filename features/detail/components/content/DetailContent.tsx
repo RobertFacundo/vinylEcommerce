@@ -8,7 +8,7 @@ interface DetailContentProps {
 
 const DetailContent = ({ album }: DetailContentProps) => {
     return (
-        <div className="flex flex-col gap-10 lg:flex-row p-5">
+        <div className="flex flex-col-reverse md:flex-col gap-10 lg:flex-row p-5 border-b border-[#C89268]/30">
             <div className="lg:w-2/4 ">
                 <Image
                     src={album.cover}

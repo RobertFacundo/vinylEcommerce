@@ -28,7 +28,7 @@ const ProductDetailView = ({ id }: ProductDetailViewProps) => {
     return (
         <>
             <DetailContent album={album}/>
-            <TrackList />
+            <TrackList tracks={album.tracks}/>
         </>
     )
 };
