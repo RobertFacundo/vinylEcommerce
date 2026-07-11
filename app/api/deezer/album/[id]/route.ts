@@ -28,7 +28,10 @@ export async function GET(
 
         // Información principal
         title: data.title,
-        artist: data.artist.name,
+        artist: {
+            id: data.artist.id,
+            name: data.artist.name,
+        },
 
         // Imagen
         cover: data.cover_xl,

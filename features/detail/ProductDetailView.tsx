@@ -1,5 +1,6 @@
 "use client"
 import DetailContent from "./components/content/DetailContent";
+import Recommendation from "./components/recommendations/Recommendation";
 import TrackList from "./components/tracks/TrackList";
 import { useAlbum } from "./hooks/useAlbum";
 
@@ -16,6 +17,7 @@ const ProductDetailView = ({ id }: ProductDetailViewProps) => {
     } = useAlbum(id);
 
 
+
     if (isLoading) {
         return <p>Cargando...</p>;
     }
@@ -25,10 +27,12 @@ const ProductDetailView = ({ id }: ProductDetailViewProps) => {
         return <p>Album not found</p>;
     }
 
+    console.log(album, 'log del product detail view');
     return (
         <>
-            <DetailContent album={album}/>
-            <TrackList tracks={album.tracks}/>
+            <DetailContent album={album} />
+            <TrackList tracks={album.tracks} />
+            <Recommendation currentAlbumId={album.id} artistName={album.artist.name} />
         </>
     )
 };

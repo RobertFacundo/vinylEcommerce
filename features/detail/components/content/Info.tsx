@@ -46,7 +46,7 @@ const Info = ({ album }: InfoProps) => {
                 </h1>
 
                 <p className="text-lg text-zinc-400 font-[family-name:var(--font-geist-mono)]">
-                    {album.artist}
+                    {album.artist.name}
                 </p>
 
                 <div className="flex items-center gap-4 mt-4">
