@@ -22,6 +22,7 @@ const Recommendation = ({
 
     return (
         <div className="max-w-7xl mx-auto px-6">
+            <h1 className="text-6xl mb-6 leading-[1.05] text-center font-[family-name:var(--font-alegreya)] font-normal">More Like This</h1>
             <div className="grid grid-cols-4 gap-16">
                 {recommendations?.map((album) => (
                     <ProductCard

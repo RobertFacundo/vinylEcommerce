@@ -9,10 +9,12 @@ export async function GET(
     { params }: { params: Params }
 ) {
     const { id } = await params;
+    console.log("Album id:", id);
 
     const res = await fetch(
         `https://api.deezer.com/album/${id}`
     );
+    console.log("Status:", res.status);
 
     if (!res.ok) {
         return NextResponse.json(
@@ -22,6 +24,8 @@ export async function GET(
     }
 
     const data = await res.json();
+
+    console.log(data);
 
     const album = {
         id: data.id,

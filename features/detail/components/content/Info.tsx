@@ -2,9 +2,11 @@ import { Album } from "../../types/album";
 import {
     HiCalendarDateRange,
     HiMusicalNote,
-    HiTag
+    HiTag,
+    HiArrowLeft
 } from "react-icons/hi2";
 import { TbVinyl } from "react-icons/tb";
+import Link from "next/link";
 
 type InfoProps = {
     album: Album
@@ -40,7 +42,16 @@ const Info = ({ album }: InfoProps) => {
         <div className="flex flex-col gap-8 mt-3">
 
             <div className="space-y-2 border-b pb-2 border-[#C89268]/30">
-                <span className="text-[#C89268] text-sm font-semibold">{album.genre}</span>
+               <div className="flex flex-col">
+                 <Link
+                     href="/shop"
+                     className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-[#C89268] transition-colors mb-4 cursor pointer z-50"
+                 >
+                     <HiArrowLeft />
+                     Back to shop
+                 </Link>
+                 <span className="text-[#C89268] text-sm font-semibold">{album.genre}</span>
+               </div>
                 <h1 className="md:text-8xl text-6xl mb-6 leading-[1.05] font-[family-name:var(--font-alegreya)] font-semibold">
                     {album.title}
                 </h1>

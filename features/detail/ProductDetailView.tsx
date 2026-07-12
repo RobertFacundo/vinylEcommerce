@@ -1,5 +1,6 @@
 "use client"
 import DetailContent from "./components/content/DetailContent";
+import ProductDetailSkeleton from "./components/loaders/ProductDetailSkeleton";
 import Recommendation from "./components/recommendations/Recommendation";
 import TrackList from "./components/tracks/TrackList";
 import { useAlbum } from "./hooks/useAlbum";
@@ -19,7 +20,7 @@ const ProductDetailView = ({ id }: ProductDetailViewProps) => {
 
 
     if (isLoading) {
-        return <p>Cargando...</p>;
+        return <ProductDetailSkeleton/>;
     }
 
 
