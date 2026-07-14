@@ -16,7 +16,7 @@ const TrackItem = ({ track, index, onPlay }: TrackItemProps) => {
                 <span className="text-[#984d13] text-sm font-semibold">
                     {index + 1}
                 </span>
-                <button onClick={() => onPlay(track)} className="cursor-pointer text-[#dfc0a8] hover:text-[#d3762e] transition-colors duration-500 ease-in-out">
+                <button onClick={() => onPlay(track)} className="cursor-pointer text-[#d3752ec7] hover:text-[#e67118] transition-colors duration-500 ease-in-out">
                     <HiPlay size={22} />
                 </button>
 

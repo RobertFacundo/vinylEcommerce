@@ -11,7 +11,7 @@ const TrackList = ({ tracks }: TrackListProps) => {
     const { audioRef, playTrack } = useAudioPlayer();
 
     return (
-        <div className="flex flex-col gap-3 py-2 px-5">
+        <div className="flex flex-col gap-3 py-2 px-5 bg-[#C89268]/30">
             <h1 className="text-5xl mb-6 leading-[1.05] font-[family-name:var(--font-alegreya)] font-normal">Track List</h1>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-12">
                 {tracks.map((track, index) => (

@@ -41,11 +41,11 @@ const Info = ({ album }: InfoProps) => {
     return (
         <div className="flex flex-col gap-8 mt-3">
 
-            <div className="space-y-2 border-b pb-2 border-[#C89268]/30">
+            <div className="info-content space-y-2 border-b pb-2 border-[#C89268]/30">
                <div className="flex flex-col">
                  <Link
                      href="/shop"
-                     className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-[#C89268] transition-colors mb-4 cursor pointer z-50"
+                     className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-[#C89268] transition-colors mb-4 cursor-pointer z-50"
                  >
                      <HiArrowLeft />
                      Back to shop
@@ -68,7 +68,7 @@ const Info = ({ album }: InfoProps) => {
                 </div>
             </div>
 
-            <div className="space-y-3 text-md opacity-80 font-[family-name:var(--font-geist-mono)] tracking-wide">
+            <div className="info-items space-y-3 text-md opacity-80 font-[family-name:var(--font-geist-mono)] tracking-wide">
 
                 {infoItems.map(({ icon: Icon, label, value, className }) => (
                     <div key={label} className="flex items-center gap-3">
