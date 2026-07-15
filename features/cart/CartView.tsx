@@ -1,6 +1,12 @@
+import CartSection from "./components/cartSection/CartSection";
+import CartRecommendations from "./components/recommendations/CartRecommendations";
+
 const CartView = () => {
     return (
-        <h1>Cart view</h1>
+        <>
+            <CartSection />
+            <CartRecommendations />
+        </>
     )
 };
 
