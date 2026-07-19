@@ -153,6 +153,15 @@ Some of the concepts explored throughout this project include:
 * Reusable component patterns in Next.js
 
 ---
+🚧 Roadmap
+
+This project is still evolving. One of the next features I plan to implement is:
+
+🤖 AI-Powered Music Recommendations
+
+The goal is to integrate an AI recommendation system capable of suggesting vinyl records based on musical genres, artists, albums, and user preferences, while also serving as a practical exploration of AI integration within modern frontend applications.
+
+---
 
 ## 📬 Contact
 
