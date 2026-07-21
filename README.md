@@ -2,7 +2,7 @@
 
 A modern vinyl record ecommerce experience featuring an AI-powered music curator that helps users discover albums based on their musical taste, moods, and influences.
 
-Inspired by the feeling of talking to a passionate record store owner, Vinyl AI helps users discover music through conversational recommendations focused on complete album experiences.
+Inspired by the feeling of talking to a passionate record store owner while browsing vinyl records... Vinyl AI helps users discover music through conversational recommendations focused on complete album experiences.
 
 Features include:
 
@@ -22,7 +22,7 @@ https://vinyl-ecommerce.vercel.app/
 
 This project was built to improve frontend architecture skills while exploring advanced UI animations, scalable state management, and optimized data fetching strategies.
 
-The goal is not only building an ecommerce application, but also following professional frontend development practices throughout the entire development process.
+TThe goal is not only to build an ecommerce application, but also to follow professional frontend development practices throughout the entire development process.
 
 The application provides a cinematic and immersive browsing experience for vinyl enthusiasts through modern animations, smooth scrolling, and responsive interactions.
 
