@@ -1,8 +1,16 @@
 # 🎵 Vinyl Store Ecommerce
 
-A modern and immersive vinyl record ecommerce built with Next.js, TypeScript, and Tailwind CSS.
+A modern vinyl record ecommerce experience featuring an AI-powered music curator that helps users discover albums based on their musical taste, moods, and influences.
 
-Focused on scalable frontend architecture, reusable components, smooth animations, and modern React development practices, this project recreates a premium music shopping experience inspired by contemporary ecommerce applications.
+Inspired by the feeling of talking to a passionate record store owner, Vinyl AI helps users discover music through conversational recommendations focused on complete album experiences.
+
+Features include:
+
+- Musical genre recommendations
+- Favorite artists and albums discovery
+- Listening moods and atmospheres
+- Similar musical influences
+- Personalized album recommendations
 
 ### Live Demo
 
@@ -48,6 +56,12 @@ The application provides a cinematic and immersive browsing experience for vinyl
 * ♻️ Reusable Components
 * 📱 Responsive Design
 
+### AI Integration
+
+- Groq API
+- Llama 3.1 8B Instant
+- Custom Prompt Engineering
+- 
 ---
 
 ## 🚀 Features
@@ -72,6 +86,17 @@ The application provides a cinematic and immersive browsing experience for vinyl
 * 🌊 Smooth Scrolling Experience with Lenis
 * 🎬 Advanced GSAP Animation System
 * 📱 Fully Responsive Design
+*  AI-Powered Music Curator
+* Conversational Album Recommendations
+
+
+## 🤖 Vinyl AI
+
+Vinyl AI is a conversational music curator integrated directly into the ecommerce experience.
+
+Instead of recommending individual songs, Vinyl AI focuses on complete albums and provides contextual recommendations based on genres, moods, artists, and musical influences.
+
+It was designed to emulate the experience of talking to a knowledgeable record store owner who is passionate about music history and album discovery.
 
 ---
 
@@ -151,15 +176,6 @@ Some of the concepts explored throughout this project include:
 * Smooth scrolling implementation with Lenis
 * Responsive ecommerce design
 * Reusable component patterns in Next.js
-
----
-🚧 Roadmap
-
-This project is still evolving. One of the next features I plan to implement is:
-
-🤖 AI-Powered Music Recommendations
-
-The goal is to integrate an AI recommendation system capable of suggesting vinyl records based on musical genres, artists, albums, and user preferences, while also serving as a practical exploration of AI integration within modern frontend applications.
 
 ---
 
