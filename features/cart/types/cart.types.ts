@@ -1,17 +1,18 @@
-import { ProductType } from "@/features/shop/types/product";
+import { ProductType } from '@/features/shop/types/product'
 
 export type CartItem = ProductType & {
-    quantity: number;
+  quantity: number
 }
 
 export type CartState = {
-    cartItems: CartItem[];
-};
+  cartItems: CartItem[]
+}
 
 export type CartActions = {
-    addToCart: (product: ProductType) => void;
-    removeFromCart: (id: number) => void;
-    increaseQuantity: (id: number) => void;
-    decreaseQuantity: (id: number) => void;
-    clearCart: () => void;
-};
+  addToCart: (product: ProductType, quantity: number) => void
+  removeFromCart: (id: number) => void
+  increaseQuantity: (id: number) => void
+  decreaseQuantity: (id: number) => void
+  updateQuantity: (id: number, quantity: number) => void
+  clearCart: () => void
+}

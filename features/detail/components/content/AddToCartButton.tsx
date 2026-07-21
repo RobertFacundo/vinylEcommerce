@@ -1,15 +1,26 @@
-import { Album } from "../../types/album";
-import { ShoppingCart } from "lucide-react";
+import { Check, ShoppingCart } from 'lucide-react'
+import { useState } from 'react'
 
 interface Props {
-    album: Album;
-    quantity: number;
+  onAddToCart: () => void
 }
 
-const AddToCartButton = ({ album, quantity }: Props) => {
-    return (
-         <button
-            className="
+const AddToCartButton = ({ onAddToCart }: Props) => {
+  const [added, setAdded] = useState(false)
+
+  const handleClick = () => {
+    onAddToCart()
+    setAdded(true)
+
+    setTimeout(() => {
+      setAdded(false)
+    }, 2000)
+  }
+
+  return (
+    <button
+      onClick={handleClick}
+      className='
                 flex items-center justify-center gap-2
                 w-full
                 rounded-md
@@ -22,13 +33,21 @@ const AddToCartButton = ({ album, quantity }: Props) => {
                 hover:bg-transparent
                 hover:text-[#C89268]
                 cursor-pointer
-            "
-        >
-            <ShoppingCart size={18} />
+            '
+    >
+      {added ? (
+        <>
+          <Check size={18} />
+          Added
+        </>
+      ) : (
+        <>
+          <ShoppingCart size={18} />
+          Add to cart
+        </>
+      )}
+    </button>
+  )
+}
 
-            Add to cart
-        </button>
-    )
-};
-
-export default AddToCartButton;
+export default AddToCartButton

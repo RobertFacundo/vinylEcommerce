@@ -1,23 +1,80 @@
-import QuantitySelector from "@/shared/components/ui/QuantitySelector";
-import Image from "next/image";
+import QuantitySelector from '@/shared/components/ui/QuantitySelector'
+import Image from 'next/image'
+import { CartItem } from '../../types/cart.types'
+import { useCartStore } from '../../store/cartStore'
+import AnimatedNumber from '@/shared/components/ui/AnimatedNumber'
 
-const CartItemRow = () => {
-    return (
-        <div className="grid grid-cols-[1fr_100px_120px_100px] items-center border-b">
-            <div className="flex gap-4 items-center">
-                {/* imagen */}
-                <h3>title</h3>
-                <p>band</p>
-            </div>
-            <span className="text-center">$24.99</span>
+interface Props {
+  item: CartItem
+}
 
-            <div className="flex justify-center">
-                {/* <QuantitySelector /> */}
-            </div>
+const CartItemRow = ({ item }: Props) => {
+  const updateQuantity = useCartStore(state => state.updateQuantity)
+  const removeFromCart = useCartStore(state => state.removeFromCart)
 
-            <span className="text-right">$49.98</span>
+  return (
+    <div
+      className='
+    flex flex-col
+    lg:grid
+    lg:grid-cols-[1fr_140px_160px_140px_60px]
+    gap-4
+    lg:gap-0
+    border-b
+    border-[#391d08]/20
+    p-4
+    items-center
+    font-[family-name:var(--font-alegreya)]
+  '
+    >
+      <div className='flex gap-4 items-center p-2'>
+        {/* imagen */}
+        <Image
+          src={item.cover}
+          alt={item.title}
+          width={120}
+          height={120}
+          className='rounded'
+        />
+
+        <div className='flex flex-col gap-3'>
+          <h3 className='text-xl'>{item.title}</h3>
+          <p>{item.band}</p>
         </div>
-    )
-};
+      </div>
+      <span className='text-2xl lg:text-left w-full'>${item.price}</span>
 
-export default CartItemRow;
+      <div className='flex justify-center lg:justify-center w-full'>
+        <QuantitySelector
+          quantity={item.quantity}
+          onChange={value => updateQuantity(item.id, value)}
+        />
+      </div>
+
+      <span className='text-center text-2xl overflow-hidden'>
+        $
+        <AnimatedNumber
+          value={(Number(item.price) * item.quantity).toFixed(2)}
+        />
+      </span>
+
+      <button
+        onClick={() => removeFromCart(item.id)}
+        className='
+    w-full
+    lg:w-auto
+    text-left
+    lg:text-center
+    text-3xl
+    hover:text-[#C89268]
+    transition-colors
+    cursor-pointer
+  '
+      >
+        ×
+      </button>
+    </div>
+  )
+}
+
+export default CartItemRow
